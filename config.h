@@ -8,13 +8,25 @@ static int min_width = 500;                    /* minimum width when centered */
 static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"MesloLGL Nerd Font Mono:size=10"
+	"CaskaydiaCove Nerd Font Mono:size=9"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:size=9:antialias=true:autohint=false";
+static const char col_gray1[]       = "#d3d7cf";
+static const char col_gray2[]       = "#d3d7cf";
+static const char col_gray3[]       = "#000000";
+static const char col_gray4[]       = "#ffffff";
+static const char col_cyan[]        = "#0000aa";
+static const char col_evergreen[]   = "#2B573D";
+static const char col_dawn_white[]  = "#F2E9E1";
+static const char col_dawn_dusk[]   = "#286983";
+static const char col_dawn_pink[]   = "#EBBCBA";
+static const char col_yellow[]      = "#F5C700";
+
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
+	              /*     fg         bg       */
+	[SchemeNorm] = { col_gray3, col_dawn_white },
+	[SchemeSel] = { col_dawn_white, col_evergreen },
 	[SchemeSelHighlight] = { "#ffc978", "#005577" },
 	[SchemeNormHighlight] = { "#ffc978", "#222222" },
 	[SchemeOut] = { "#000000", "#00ffff" },
